@@ -29,9 +29,8 @@ let NUMBER_NAME = {
     90: "ninety",
 };
 module.exports = function toReadable(number) {
-    let arr = [];
     let result = "";
-    let i = 0;
+    
     if (number > 99) {
         result = `${NUMBER_NAME[Math.floor(number / 100)]} hundred `;
     }
@@ -48,4 +47,4 @@ module.exports = function toReadable(number) {
         result += `${NUMBER_NAME[number]}`;
     }
     return result.trim();
-};
+}
